@@ -1,0 +1,8 @@
+.DS_Store
+
+tex/*.aux
+tex/*.log
+tex/*.out
+tex/preview_page_*.png
+
+tmp/
