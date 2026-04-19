@@ -13,7 +13,7 @@
 \usepackage{caption}
 \usepackage{tikz}
 
-\usetikzlibrary{calc,positioning}
+\usetikzlibrary{arrows.meta,calc,positioning}
 
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0.24em}
@@ -29,6 +29,7 @@
 \definecolor{muted}{HTML}{6B7280}
 \definecolor{accentGreen}{HTML}{0B8A4A}
 \definecolor{refBlue}{HTML}{1F77B4}
+\definecolor{warnRed}{HTML}{C74E4E}
 
 \hypersetup{
     colorlinks=true,
@@ -79,15 +80,15 @@
 
 \begin{document}
 \pagestyle{empty}
-\small
 
 \begin{center}
-{\Large \textbf{Statement of Research}}\\
-Jianan Zhao\hspace{1.6em}{\small\color{ink}\textbf{PhD Candidate at Mila-UdeM (Expected graduation: Jan 2027)}}
+{\Large \textbf{Statement of Research}}\\[-0.05em]
+{\normalsize Jianan Zhao \quad | \quad PhD Candidate, Mila / Universit\'e de Montr\'eal \quad | \quad \href{\urlScholar}{Google Scholar}}
 \end{center}
+\vspace{-0.55em}
 
-\section*{1. Research Expertise}
-My research lies at the intersection of graph machine learning, foundation models, and AI for science. Across these areas, I have tried to build methods that are simple in formulation, scalable in practice, and faithful to the structure of complex data. A consistent theme in my work is that many real-world domains --- including scientific data, biological systems, and knowledge bases --- are not naturally iid tables or free text, but richly structured objects with relations, hierarchies, and geometry. I am therefore especially interested in models that can preserve this structure while still benefiting from the transfer, scale, and flexibility of modern foundation models. This perspective aligns naturally with Zitnik Lab's emphasis on geometry, knowledge-grounded learning, multimodal AI, and impactful applications in science and medicine. Figure~1 summarizes selected publications across these themes.
+\section*{1. Prior Research Experience: Efficient Structure Reasoning for Foundation Models}
+I'm Jianan Zhao, a fourth-year PhD candidate at Mila-UdeM. Before pursuing a PhD degree, I obtained a master degree at BUPT and was a visiting fellow at Microsoft Research Asia with a Star-of-Tomorrow award (Top-10\%). During that period,  I focused on graph structure learning, graph transformers, and knowledge-graph reasoning~\cite{gsr,house,gophormer,mvse,hgsl,nshe}, these works provided the graph-learning foundation for my PhD agenda. My PhD research focuses on a core question: how can foundation models reason over \textbf{\textit{structured}} data \textbf{\textit{efficiently}}? Scientific and biomedical data are rarely independent text snippets or tabular examples. They are graphs of entities, relations, hierarchies, and mechanisms. My work has therefore aimed to preserve structure while gaining the transferability, scalability, and flexibility of modern foundation models. 
 
 \begin{figure}[H]
 \centering
@@ -138,50 +139,125 @@ My research lies at the intersection of graph machine learning, foundation model
 \scriptsize
 \setlength{\parskip}{0.03em}
 \pubgroup{PhD Publications}
-\paperrow{1}{arXiv26 \textit{GeneZip}}{\topictag{llmOrange}{LLM}/\topictag{aiGreen}{AI4S}}{\urlGeneZip}
-\paperrow{2}{ICLR26 \textit{RaftPPI}}{\topictag{llmOrange}{LLM}/\topictag{aiGreen}{AI4S}}{\urlRaftPPI}
-\paperrow{3}{NeurIPS25 \textit{HAX}}{\topictag{llmOrange}{LLM}}{\urlHAX}
-\paperrow{4}{Nature Computational Science 2025 \textit{PandemicLLM}}{\topictag{llmOrange}{LLM}/\topictag{aiGreen}{AI4S}}{\urlPandemicLLM}
-\paperrow{5}{ICLR25 \textit{GraphAny}}{\topictag{graphBlue}{Graph}/\topictag{llmOrange}{GFM}}{\urlGraphAny}
-\paperrow{6}{arXiv23 \textit{GraphText}}{\topictag{graphBlue}{Graph}/\topictag{llmOrange}{LLM}}{\urlGraphText}
-\paperrow{7}{ICLR23 \textit{GLEM}}{\topictag{graphBlue}{Graph}/\topictag{llmOrange}{LLM}}{\urlGLEM}
+\paperrow{1}{arXiv26 GeneZip}{\topictag{llmOrange}{LLM}/\topictag{aiGreen}{AI4S}}{\urlGeneZip}
+\paperrow{2}{ICLR26 RaftPPI}{\topictag{llmOrange}{LLM}/\topictag{aiGreen}{AI4S}}{\urlRaftPPI}
+\paperrow{3}{NeurIPS25 HAX}{\topictag{llmOrange}{LLM}}{\urlHAX}
+\paperrow{4}{Nature Computational Science 2025 PandemicLLM}{\topictag{llmOrange}{LLM}/\topictag{aiGreen}{AI4S}}{\urlPandemicLLM}
+\paperrow{5}{ICLR25 GraphAny}{\topictag{graphBlue}{Graph}/\topictag{llmOrange}{GFM}}{\urlGraphAny}
+\paperrow{6}{arXiv23 GraphText}{\topictag{graphBlue}{Graph}/\topictag{llmOrange}{LLM}}{\urlGraphText}
+\paperrow{7}{ICLR23 GLEM}{\topictag{graphBlue}{Graph}/\topictag{llmOrange}{LLM}}{\urlGLEM}
 \pubgroup{Previous Publications}
-\paperrow{8}{WSDM23 \textit{GSR}}{\topictag{graphBlue}{Graph}}{\urlGSR}
-\paperrow{9}{ICML22 \textit{HousE}}{\topictag{graphBlue}{Graph}}{\urlHousE}
-\paperrow{10}{arXiv21 \textit{Gophormer}}{\topictag{graphBlue}{Graph}}{\urlGophormer}
-\paperrow{11}{ECML21 \textit{MVSE}}{\topictag{graphBlue}{Graph}}{\urlMVSE}
-\paperrow{12}{AAAI21 \textit{HGSL}}{\topictag{graphBlue}{Graph}}{\urlHGSL}
-\paperrow{13}{IJCAI20 \textit{NSHE}}{\topictag{graphBlue}{Graph}}{\urlNSHE}
+\paperrow{8}{WSDM23 GSR}{\topictag{graphBlue}{Graph}}{\urlGSR}
+\paperrow{9}{ICML22 HousE}{\topictag{graphBlue}{Graph}}{\urlHousE}
+\paperrow{10}{arXiv21 Gophormer}{\topictag{graphBlue}{Graph}}{\urlGophormer}
+\paperrow{11}{ECML21 MVSE}{\topictag{graphBlue}{Graph}}{\urlMVSE}
+\paperrow{12}{AAAI21 HGSL}{\topictag{graphBlue}{Graph}}{\urlHGSL}
+\paperrow{13}{IJCAI20 NSHE}{\topictag{graphBlue}{Graph}}{\urlNSHE}
 \end{minipage}
 }
 \caption{\small Selected publications across Graph, LLM / GFM, and AI4S (only first-, second-, or equal-contribution author works). Full list: \href{\urlScholar}{Google Scholar}. Numbered markers and paper titles are clickable in the PDF.}
 \end{figure}
 \vspace{-0.8em}
 
-My early work focused on structured and heterogeneous graphs. In \textit{Network Schema Preserving Heterogeneous Information Network Embedding} and \textit{Heterogeneous Graph Structure Learning}~\cite{nshe,hgsl}, I studied how to represent graph data when node and edge types carry different semantics, and how to improve graph learning by revising the input structure rather than treating the graph as fixed. These projects taught me that structure is not just a storage format but a source of inductive bias, and that useful models should expose abstractions that transfer across settings. I later extended this direction to graph transformers in \textit{Gophormer}~\cite{gophormer}, graph structure refinement in \textit{GSR}~\cite{gsr}, and knowledge-graph representation learning in \textit{HousE}~\cite{house}. Together, this work gave me a strong base in graph representation learning, scalable GNNs, and knowledge-aware machine learning.
+Across these projects, I study efficiency across the foundation-model pipeline, spanning training, data, adaptation, and inference.
 
-During my PhD, I became increasingly interested in bridging graph learning with language models. In \textit{GLEM}~\cite{glem}, I developed a variational EM framework that couples a language model and a GNN on large text-attributed graphs without the cost of end-to-end joint training. The method showed that language and graph structure can improve one another through iterative co-training and achieved top Open Graph Benchmark performance. More importantly, \textit{GLEM} convinced me that graph-model/LLM interaction is a first-class modeling problem rather than a feature concatenation trick.
+\textbf{Training efficiency: jointly using language and graph structure without expensive end-to-end training.} Large text-attributed graphs contain two complementary signals: text gives semantic meaning to nodes, while graph structure captures relations and community context. A direct cascade of a language model and a GNN is difficult to train jointly at scale because it couples two large learners with different optimization and memory profiles. In \textit{GLEM}~\cite{glem} (ICLR 2023 Notable, Top 5\%), I developed a variational EM framework that lets a language model and a GNN improve one another through iterative co-training rather than costly end-to-end coupling. The result was both effective and efficient: it achieved first place on three Open Graph Benchmark node-property-prediction tasks at the time, while clarifying that graph-model/language-model interaction should be treated as a modeling problem, not merely a feature-concatenation trick.
 
-I pushed this interface further in \textit{GraphText}~\cite{graphtext}, asking whether graph problems could be translated into a language space that LLMs can operate on directly. By converting local graph structure into a graph-syntax tree and textual sequence, the framework enabled training-free, interactive graph reasoning and showed that the right graph-to-text interface can let an LLM outperform supervised GNN baselines on node classification without graph-specific training. In parallel, \textit{GraphAny}~\cite{graphany} asked the complementary question of fully-inductive generalization, where test graphs may have unseen structure, features, and label spaces. Together, these projects shaped my view that graph ML is moving toward reusable, structure-aware priors and interfaces rather than isolated task-specific models.
+\textbf{Data efficiency: training one model that transfers across many graphs.} Foundation models should not require a separate supervised model for each new graph. In \textit{GraphAny}~\cite{graphany} (ICLR 2025), I worked on fully inductive node classification where test graphs can have unseen structures, feature spaces, and label spaces. \textit{GraphAny} moved node classification closer to a true graph foundation model: trained on one graph, it surpassed GCN and GAT models trained separately on 31 target graphs, and completed training plus inference over those 31 graphs in roughly six minutes. This project strengthened my interest in reusable graph priors: instead of learning a new model for each graph, the goal is to learn transferable structural operations.
 
-More recently, I have focused on foundation-model ideas for scientific problems where structured reasoning and systems constraints both matter. In \textit{PandemicLLM}~\cite{pandemicllm}, we reframed infectious disease forecasting as multimodal reasoning over text, policy, genomic surveillance, and epidemiological signals. In \textit{RaftPPI}~\cite{raftppi}, we developed a residue-level factorization strategy for proteome-scale protein interaction retrieval, turning expensive screening into retrieval-friendly computation. In \textit{GeneZip}~\cite{genezip}, we studied long-context DNA modeling through region-aware compression, using biological priors to allocate model capacity where it matters most. These projects broadened my research beyond graph benchmarks and reinforced my belief that foundation models are most meaningful when they become reliable tools for scientific reasoning and decision support.
+\textbf{Adaptation efficiency: using LLMs for graph tasks without graph-specific training.} My next step asked whether an LLM can perform graph reasoning if the graph is exposed through the right interface. In \textit{GraphText}~\cite{graphtext} (NeurIPS 2024 AFM Workshop), I represented local graph structure as a text-compatible graph syntax, enabling an LLM to operate on node-classification problems without additional graph-specific training. This was the first work, to my knowledge, showing that a training-free LLM can outperform standard supervised GNN baselines on node classification. The point was not that LLMs replace graph models; rather, \textit{GraphText} showed that interface design can convert structured reasoning into a form where language models become useful collaborators.
 
-Taken together, my prior work has prepared me to contribute to Zitnik Lab in several ways. I can bring experience in graph learning, graph-language interfaces, large-scale model design, and AI-for-science applications. Just as importantly, I bring a research style that tries to connect method development with a broader conceptual question: what should the interface between structure, language, and scientific knowledge look like? At the same time, I see Zitnik Lab as an environment where I can grow substantially. The lab's strengths in biomedical knowledge graphs, geometric learning, multimodal models, and scientific deployment are precisely the directions in which I want to push my research further. I view myself as a good match not because my current work already solves these problems, but because it gives me a strong starting point for contributing to them in a rigorous and collaborative way.
 
-\section*{2. LLM for KG Reasoning}
-My future research goal is to build LLM systems that reason more reliably over large knowledge graphs, especially in biomedicine~\cite{llmkgsurvey,kgagentmed}. Many biomedical questions require multi-hop composition across genes, proteins, pathways, phenotypes, drugs, diseases, and clinical concepts. In principle, however, the space of possible reasoning chains grows combinatorially: for a graph with average degree $d$ and hop depth $k$, naive path exploration yields on the order of $d^k$ candidates. Existing systems therefore rely on shallow retrieval, heuristic pruning, or manually chosen seed nodes. These approximations are often useful, but they become brittle exactly where scientific discovery demands robustness.
 
-At the same time, current LLMs are not yet strong graph reasoners on their own. Even frontier models continue to struggle with faithful traversal and composition on graph-style tasks; Anthropic's April 16, 2026 Claude Opus 4.7 report still shows limited performance on GraphWalks search and parent-retrieval tasks~\cite{anthropicopus}. This matches what I observed in \textit{GraphText}~\cite{graphtext}: LLMs are often good at summarizing local evidence, but much less reliable when they must systematically search a structured space. For this reason, I do not think the right objective is simply to ``let the LLM reason over the KG.'' The key challenge is to design a better division of labor between graph-native and language-native reasoning modules.
+\textbf{Inference efficiency: scaling foundation-model reasoning to scientific search spaces.} More recently, I have applied this efficiency perspective to AI for science. In \textit{RaftPPI}~\cite{raftppi} (ICLR 2026), we addressed proteome-scale protein-protein interaction retrieval. Brute-force screening is prohibitive at proteome scale, so we developed residue-level factorization that preserves prediction quality while reducing retrieval from 4.9 GPU months to 3.3 GPU minutes. In parallel, \textit{GeneZip}~\cite{genezip} learned region-aware DNA compression, reaching 137.6$\times$ compression with only +0.31 perplexity and a 50.4$\times$ eQTL speedup over JanusDNA.
+These projects moved my work from graph benchmarks toward scientific systems where structure, efficiency, and reliability matter simultaneously.
 
-My central hypothesis is that LLMs should reason \textit{over explicit path evidence}, rather than search a knowledge graph from scratch. In this view, a graph model first proposes a small set of reliable \textit{path instances} or reasoning traces, and the LLM then analyzes, compares, aggregates, and verbalizes them. This is a different interface from node-only retrieval or simply stuffing a subgraph into context. Paths are attractive because they are structured, compositional, and interpretable: they expose how evidence flows across the graph and which relations support an answer. In biomedicine, this matters because an answer without a mechanism is often much less useful than one tied to a plausible chain of evidence.
+Together, these projects prepare me to contribute graph learning, foundation models, large-scale retrieval, and AI-for-science systems to Zitnik Lab, with a technical style centered on structural inductive bias, graph reasoning, and real biomedical deployment.
 
-I would like to pursue this agenda through three connected research thrusts. The first is \textit{tractable path proposal over holistic knowledge graphs}. Here, I want to study how graph models --- including GNNs, knowledge-graph embedding models, and logical query encoders~\cite{logicalqueries} --- can propose informative multi-hop paths without enumerating the full search space. A key idea is that graph models can be fine-tuned over the entire knowledge base in a way that current LLMs cannot, allowing them to encode global graph regularities, relation semantics, and structural shortcuts. I am especially interested in adaptive breadth-depth retrieval strategies, inspired by recent work such as ARK from Zitnik Lab~\cite{ark}, but extending them from node exploration to path-level proposal and ranking.
+\section*{2. Future Research: From Edge Retrieval to Path Reasoning: PathProposer for LLMs over Biomedical Knowledge Graphs}
+My future research will focus on making LLMs better \textbf{path reasoners} over biomedical knowledge graphs~\cite{llmkgsurvey,kgagentmed}. The key distinction is that the LLM should not be asked to \textit{generate} or \textit{search for} paths from scratch. Instead, a graph-native model should propose a compact set of top-$k$ concrete path instances, and the LLM should reason over these paths as explicit evidence. This distinction matters because biomedical questions are rarely answered by a single edge. A drug may act through a target, a pathway, a phenotype, and a disease mechanism; a gene-disease hypothesis may require connecting variants, proteins, tissues, and clinical concepts. Moving from one-hop edge retrieval to multi-hop path reasoning is therefore essential for mechanism-aware biomedical AI.
 
-The second thrust is \textit{faithful language reasoning over candidate paths}. Once a graph module proposes a small set of path instances, an LLM can be used for semantic comparison, evidence aggregation, contradiction detection, uncertainty expression, and natural-language explanation. I want to develop objectives and evaluation protocols for \textit{path faithfulness}: a model should not only produce a correct answer, but should also ground that answer in explicit graph evidence that survives perturbation and scrutiny. This may involve contrastive training over plausible and implausible paths, verifier models that check relational consistency, or distillation pipelines in which stronger reasoners teach smaller models to select better evidence.
+\begin{figure}[H]
+\centering
+\resizebox{0.94\linewidth}{!}{%
+\begin{tikzpicture}[x=1cm,y=1cm,>=Latex]
+  \tikzset{
+    panel/.style={rounded corners=5pt, line width=0.75pt},
+    qbox/.style={rounded corners=4pt, draw=ink!28, fill=white, align=center, text width=3.3cm, inner sep=3pt, font=\footnotesize},
+    box/.style={rounded corners=4pt, draw=ink!35, fill=white, align=center, inner sep=3pt, font=\footnotesize},
+    chip/.style={rounded corners=3pt, draw=ink!25, fill=white, align=center, inner sep=2.3pt, font=\scriptsize},
+    kgdot/.style={circle, draw=ink!45, fill=white, inner sep=1.0pt}
+  };
 
-The third thrust is \textit{biomedical and multimodal KG reasoning}. In realistic scientific settings, knowledge graphs do not exist in isolation; they interact with literature, omics measurements, clinical time series, ontologies, and experimental observations. I therefore want to study how path-grounded KG reasoning can be integrated with multimodal evidence, so that the system can move between structured biomedical knowledge and unstructured scientific context. Example applications include mechanism-aware biomedical question answering, candidate target prioritization, therapy repurposing, and hypothesis generation where the output is not just a ranked entity but a small set of evidence-backed mechanistic routes.
+  \fill[warnRed!5] (0,0.28) rectangle (5.85,3.08);
+  \draw[panel, warnRed!70!black] (0,0.28) rectangle (5.85,3.08);
+  \fill[accentGreen!6] (6.15,0.28) rectangle (14.15,3.08);
+  \draw[panel, accentGreen!80!black] (6.15,0.28) rectangle (14.15,3.08);
 
-I am particularly excited about pursuing this work in Zitnik Lab because the lab uniquely combines large-scale biomedical knowledge graphs, geometric learning, multimodal foundation models, and agentic retrieval systems with a strong orientation toward scientific impact. My hope is to contribute graph-centered methodology while learning how to push it toward more consequential biomedical problems. In the long run, I want to help build knowledge-grounded foundation models that can move fluidly between graph structure, language, and scientific evidence --- models that support discovery not only by making predictions, but by exposing the reasoning paths that make those predictions actionable.
+  \node[anchor=west, font=\bfseries\footnotesize, text=warnRed!80!black] at (0.24,2.78) {Naive retrieval + raw LLM};
+  \node[anchor=west, font=\bfseries\footnotesize, text=accentGreen!80!black] at (6.40,2.78) {Path-grounded graph + language reasoning};
+
+  \node[qbox] at (2.92,2.28) {Biomedical query};
+  \node[qbox] at (9.80,2.28) {Biomedical query};
+
+  \node[kgdot] (lr) at (0.98,1.42) {};
+  \node[kgdot] (la1) at (1.72,1.86) {};
+  \node[kgdot] (la2) at (1.82,1.42) {};
+  \node[kgdot] (la3) at (1.70,0.98) {};
+  \node[kgdot] (lb1) at (2.70,2.00) {};
+  \node[kgdot] (lb2) at (2.58,1.62) {};
+  \node[kgdot] (lb3) at (2.80,1.40) {};
+  \node[kgdot] (lb4) at (2.62,1.10) {};
+  \node[kgdot] (lb5) at (2.82,0.80) {};
+  \draw[ink!50, line width=0.45pt] (lr)--(la1) (lr)--(la2) (lr)--(la3);
+  \draw[ink!50, line width=0.45pt] (la1)--(lb1) (la1)--(lb2) (la2)--(lb3) (la2)--(lb4) (la3)--(lb5);
+  \node[font=\footnotesize\bfseries, text=warnRed!80!black] at (1.98,0.66) {$O(d^k)$ candidate paths};
+
+  \node[box, fill=llmOrange!12, draw=llmOrange!60!black, text width=1.15cm] (llmraw) at (4.85,1.42) {LLM};
+  \draw[->, line width=0.75pt, warnRed!75!black] (3.28,1.42) -- (4.08,1.42);
+  \node[font=\scriptsize, align=center, text=warnRed!78!black] at (4.82,0.66) {heuristic pruning\\shallow context};
+
+  \node[kgdot] (r1) at (6.92,1.46) {};
+  \node[kgdot] (r2) at (7.48,1.84) {};
+  \node[kgdot] (r3) at (7.66,1.44) {};
+  \node[kgdot] (r4) at (7.48,1.02) {};
+  \node[kgdot] (r5) at (8.10,1.68) {};
+  \node[kgdot] (r6) at (8.12,1.20) {};
+  \draw[ink!50, line width=0.45pt] (r1)--(r2) (r1)--(r3) (r1)--(r4) (r2)--(r5) (r3)--(r5) (r3)--(r6) (r4)--(r6);
+  \node[font=\footnotesize, align=center, text=accentGreen!75!black] at (7.56,0.68) {holistic KG};
+
+  \node[box, fill=graphBlue!10, draw=graphBlue!65!black, text width=1.65cm] (prop) at (9.05,1.52) {Graph path\\proposer};
+  \draw[->, line width=0.8pt, accentGreen!80!black] (8.18,1.44) -- (8.25,1.44);
+
+  \node[chip, text width=2.05cm] (p1) at (10.95,1.88) {gene $\rightarrow$ pathway $\rightarrow$ disease};
+  \node[chip, text width=2.05cm] (p2) at (10.95,1.46) {variant $\rightarrow$ protein $\rightarrow$ phenotype};
+  \node[chip, text width=2.05cm] (p3) at (10.95,1.04) {$\cdots$ top-$k$ path instances};
+  \draw[->, line width=0.65pt, accentGreen!80!black] (9.95,1.66) -- (10.10,1.80);
+  \draw[->, line width=0.65pt, accentGreen!80!black] (9.98,1.50) -- (10.10,1.50);
+  \draw[->, line width=0.65pt, accentGreen!80!black] (9.95,1.34) -- (10.10,1.12);
+
+  \node[box, fill=llmOrange!12, draw=llmOrange!60!black, text width=1.35cm] (llm2) at (12.95,1.46) {LLM\\reasoner};
+  \draw[->, line width=0.75pt, accentGreen!80!black] (12.10,1.46) -- (12.24,1.46);
+  \node[box, fill=aiGreen!10, draw=aiGreen!70!black, text width=1.75cm] (out) at (14.00,1.46) {answer +\\mechanistic\\evidence};
+  \draw[->, line width=0.75pt, accentGreen!80!black] (13.63,1.46) -- (13.12,1.46);
+
+  \node[font=\scriptsize\bfseries, text=graphBlue!72!black] at (2.80,0.02) {tractable proposal};
+  \node[font=\scriptsize\bfseries, text=llmOrange!80!black] at (7.95,0.02) {reason over explicit evidence};
+  \node[font=\scriptsize\bfseries, text=aiGreen!75!black] at (12.98,0.02) {inspectable mechanism};
+\end{tikzpicture}
+\vspace{0.1em}%
+}
+\caption{\small Path-grounded KG reasoning: a graph module proposes candidate paths, and the LLM reasons over explicit evidence instead of searching the KG directly.}
+\end{figure}
+\vspace{-0.95em}
+
+A central starting point is \textit{ARK}~\cite{ark}, which is highly relevant to this proposal and to Zitnik Lab. \textit{ARK} shows that an LLM agent can balance breadth and depth by alternating between global lexical search over node descriptions and one-hop neighborhood exploration. This is an important step beyond shallow KG-RAG because one-hop operations can be composed into multi-hop exploration. However, it also exposes the next bottleneck. If the unit of retrieval remains an edge or a one-hop operation, path quality depends on inference-time search and on when the LLM prunes the frontier. Adding beam search can reduce the number of explored candidates from exhaustive $O(d^L)$ enumeration to roughly $O(LBd)$ under a fixed beam size $B$, but the path is still assembled through local tool decisions, often with expensive LLM calls and without a graph-native model trained on the full KG.
+
+My proposal is to \textit{make the path, rather than the edge, the basic evidence object}. We propose \textit{PathProposer}, which takes a query and a text-attributed biomedical KG, then return top-$k$ path instances such as drug-target-pathway-disease or variant-protein-phenotype-disease. The model would score paths through a factorized design: relation-level weights learn which biomedical relation sequences are plausible, while local transition scores select concrete next-hop entities and edges. Instead of materializing all length-$L$ paths, the proposer would run sparse dynamic programming or beam-style search over the KG, retaining backpointers so that the output is an explicit set of paths rather than only an answer node or a subgraph. With a fixed proposal budget, the computation becomes linear in hop length and local degree, while preserving multi-hop mechanisms for downstream reasoning.
+
+This design changes the role of the LLM. The LLM is no longer the path generator or graph searcher; it is a path reasoner. Given a small set of proposed paths, the LLM can compare mechanisms, identify weak edges, integrate textual evidence, express uncertainty, and produce an answer grounded in inspectable graph evidence. Training can use multiple forms of supervision: known biomedical associations as weak endpoint labels, contrastive ranking between plausible and corrupted paths, ARK-style trajectories as distillation signals, and counterfactual tests that ask whether removing a key edge changes the final reasoning. These objectives would make the system not only accurate but also auditable.
+
+I see this as a natural postdoctoral agenda in Zitnik Lab. \textit{PathProposer} connects the lab's interests in agentic AI, foundation models, geometric deep learning, large-scale knowledge graphs, LLMs, scientific discovery, and precision medicine: it is a graph-native component for biomedical reasoning that interfaces with LLMs while keeping mechanistic evidence explicit. I would evaluate it on biomedical KG question answering, target prioritization, therapy repurposing, and mechanism-aware hypothesis generation, while linking proposed paths to literature, omics, clinical records, and experimental tools. My long-term goal is knowledge-grounded foundation models that expose the paths supporting scientific claims, not just final answers.
 
 \clearpage
 \renewcommand{\refname}{3. References}
@@ -203,8 +279,10 @@ I am particularly excited about pursuing this work in Zitnik Lab because the lab
 \bibitem{logicalqueries} W. Hamilton, P. Bajaj, M. Zitnik, D. Jurafsky, and J. Leskovec. \textit{Embedding Logical Queries on Knowledge Graphs}. NeurIPS 2018.
 \bibitem{llmkgsurvey} J. Pan, S. Razniewski, J.-C. Kalo, S. Singhania, J. Chen, S. Dietze, and others. \textit{Large Language Models and Knowledge Graphs: Opportunities and Challenges}. arXiv 2023.
 \bibitem{kgagentmed} X. Su, Y. Wang, S. Gao, X. Liu, V. Giunchiglia, D.-A. Clevert, and M. Zitnik. \textit{Knowledge Graph Based Agent for Complex, Knowledge-Intensive QA in Medicine}. arXiv 2024.
-\bibitem{ark} J. Polonuer, L. Vittor, I. Arango, A. Noori, D. A. Clifton, L. Del Corro, and M. Zitnik. \textit{Autonomous Knowledge Graph Exploration with Adaptive Breadth-Depth Retrieval}. arXiv 2026.
+\bibitem{ark} J. Polonuer, L. Vittor, I. Arango, A. Noori, D. A. Clifton, L. Del Corro, and M. Zitnik. \textit{Autonomous Knowledge Graph Exploration with Adaptive Breadth-Depth Retrieval}. arXiv:2601.13969, 2026.
 \bibitem{anthropicopus} Anthropic. \textit{Introducing Claude Opus 4.7}. Product announcement, April 16, 2026.
 \end{thebibliography}
+
+
 
 \end{document}
